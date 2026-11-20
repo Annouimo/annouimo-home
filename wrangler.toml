@@ -1,0 +1,5 @@
+name = "annouimo-home"
+compatibility_date = "2026-11-20"
+workers_dev = false
+preview_urls = true
+assets = { directory = "./public" }

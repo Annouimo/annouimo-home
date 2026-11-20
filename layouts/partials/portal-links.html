@@ -1,0 +1,18 @@
+{{ with .links }}
+<section aria-labelledby="{{ $.id }}">
+  <h2 id="{{ $.id }}">{{ $.title }}</h2>
+  <ul class="links">
+    {{ range . }}
+    <li>
+      <a href="{{ .url }}">
+        <span class="link-copy">
+          <span class="link-title">{{ .name }}</span>
+          {{ with .description }}<span class="link-description">{{ . }}</span>{{ end }}
+        </span>
+        <span class="arrow" aria-hidden="true">{{ if hasPrefix .url "https://" }}↗{{ else }}→{{ end }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

@@ -1,0 +1,129 @@
+:root {
+  color-scheme: light dark;
+  --paper: #f5f4ed;
+  --text: #262824;
+  --muted: #595d55;
+  --ink: #1b365d;
+  --rule: #d8d7cb;
+  --hover: #edede3;
+  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #20211e;
+    --text: #edede2;
+    --muted: #b8b9ad;
+    --ink: #acc7eb;
+    --rule: #41433b;
+    --hover: #2b2d27;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.portal {
+  width: min(100% - 48px, 720px);
+  margin-inline: auto;
+  padding-block: clamp(48px, 9vw, 112px) 40px;
+}
+
+.intro { margin-block-end: clamp(38px, 6vw, 60px); }
+
+h1 {
+  margin: 0;
+  color: var(--ink);
+  font: 500 clamp(48px, 9vw, 84px)/1.1 Georgia, serif;
+  letter-spacing: -.04em;
+}
+
+.intro p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(16px, 3vw, 19px);
+}
+
+section + section { margin-block-start: 36px; }
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: .2em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-block-start: 1px solid var(--rule);
+}
+
+.links li { border-block-end: 1px solid var(--rule); }
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 10px;
+  min-height: 48px;
+  text-decoration: none;
+}
+
+.links a:hover { background: var(--hover); }
+.links a:hover .link-title, .articles a:hover span { text-decoration: underline; }
+
+.link-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 16px;
+}
+
+.link-title { font-weight: 650; }
+
+.link-description, time {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.arrow, time { flex-shrink: 0; }
+time { font-variant-numeric: tabular-nums; }
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+
+.more { font-size: 14px; white-space: nowrap; }
+
+footer {
+  display: flex;
+  gap: 20px;
+  margin-block-start: 32px;
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .link-copy { display: grid; }
+}

@@ -1,0 +1,3 @@
+baseURL = "https://annouimo.com/"
+languageCode = "zh-CN"
+disableKinds = ["taxonomy", "term", "sitemap", "RSS"]
