@@ -3,3 +3,57 @@
 .ann-site-nav a:hover { text-decoration:underline; text-underline-offset:.2em; }
 .ann-site-nav a:focus-visible { outline:2px solid var(--ann-accent); outline-offset:3px; }
 .ann-site-nav a[aria-current="page"] { color:var(--ann-text); font-weight:650; }
+
+/* Shared header frame. Each site supplies its own navigation. */
+.ann-topbar {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 20px;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 60px;
+  margin-inline: auto;
+  padding: 8px clamp(16px, 4vw, 32px);
+  border-bottom: 1px solid var(--ann-border);
+}
+
+.ann-topbar .ann-home-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ann-muted);
+  font: 500 14px/1.4 system-ui, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ann-topbar .ann-home-link:hover { text-decoration: underline; }
+
+.ann-topbar :is(a, button):focus-visible {
+  outline: 2px solid var(--ann-accent);
+  outline-offset: 3px;
+}
+
+:root {
+  --ann-title-size: clamp(1.875rem, 5vw, 2.5rem);
+  --ann-title-leading: 1.25;
+  --ann-title-tracking: -.025em;
+  --ann-title-details-size: .9rem;
+}
+
+:is(.ann-page-heading, .ann-page-heading.ann-page-heading) > h1 {
+  margin: 0;
+  font-size: var(--ann-title-size);
+  line-height: var(--ann-title-leading);
+  letter-spacing: var(--ann-title-tracking);
+}
+
+.ann-page-heading .ann-heading-details {
+  margin-block: .75rem 0;
+  color: var(--ann-muted);
+  font-size: var(--ann-title-details-size);
+  line-height: 1.6;
+}

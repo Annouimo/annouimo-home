@@ -14,16 +14,20 @@
   {{ end }}
 </head>
 <body>
+  <header class="ann-topbar">
+    <a class="ann-home-link" href="{{ "/" | relURL }}">个人主页</a>
+    <nav class="ann-site-nav" aria-label="主页导航">
+      <a href="#sites">站点</a>
+      <a href="#repositories">GitHub 精选</a>
+    </nav>
+  </header>
   <main class="portal">
-    <header class="intro">
+    <header class="intro ann-page-heading">
       <h1>{{ .Title }}</h1>
-      <p>{{ .Description }}</p>
+      <p class="ann-heading-details">{{ .Description }}</p>
     </header>
     {{ partial "portal-links.html" (dict "id" "sites" "title" "站点" "links" .Params.portalSites) }}
     {{ partial "portal-links.html" (dict "id" "repositories" "title" "GitHub 精选" "links" .Params.repositories) }}
-    <nav class="ann-site-nav" aria-label="站点导航">
-      {{ range site.Data.shared.sites }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
-    </nav>
     <footer>
       <a href="https://github.com/Annouimo">GitHub</a>
       <a href="https://blog.annouimo.com/index.xml">RSS</a>
