@@ -11,7 +11,7 @@ target = "assets/shared"
 [[module.mounts]]
 source = "design"
 target = "data/shared"
-includeFiles = ["sites.json"]
+files = ["sites.json"]
 [[module.mounts]]
 source = "design/icons"
 target = "static/icons"
