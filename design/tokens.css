@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light dark;
+  --ann-canvas: #f5f4ed;
+  --ann-text: #262824;
+  --ann-muted: #595d55;
+  --ann-accent: #1b365d;
+  --ann-border: #d8d7cb;
+  --ann-hover: #edede3;
+  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ann-canvas: #20211e;
+    --ann-text: #edede2;
+    --ann-muted: #b8b9ad;
+    --ann-accent: #acc7eb;
+    --ann-border: #41433b;
+    --ann-hover: #2b2d27;
+  }
+}
+

@@ -9,7 +9,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="icon" type="image/svg+xml" href="{{ "icons/home.svg" | relURL }}">
   <link rel="alternate" type="application/rss+xml" title="博客 RSS" href="https://blog.annouimo.com/index.xml">
-  {{ with resources.Get "css/portal.css" | minify | fingerprint }}
+  {{ with slice (resources.Get "shared/tokens.css") (resources.Get "shared/navigation.css") (resources.Get "css/portal.css") | resources.Concat "css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
 </head>
@@ -21,6 +21,9 @@
     </header>
     {{ partial "portal-links.html" (dict "id" "sites" "title" "站点" "links" .Params.portalSites) }}
     {{ partial "portal-links.html" (dict "id" "repositories" "title" "GitHub 精选" "links" .Params.repositories) }}
+    <nav class="ann-site-nav" aria-label="站点导航">
+      {{ range site.Data.shared.sites }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </nav>
     <footer>
       <a href="https://github.com/Annouimo">GitHub</a>
       <a href="https://blog.annouimo.com/index.xml">RSS</a>

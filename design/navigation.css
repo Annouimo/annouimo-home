@@ -1,0 +1,5 @@
+.ann-site-nav { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; font:14px/1.6 system-ui,sans-serif; }
+.ann-site-nav a { color:var(--ann-accent); text-decoration:none; padding-block:8px; }
+.ann-site-nav a:hover { text-decoration:underline; text-underline-offset:.2em; }
+.ann-site-nav a:focus-visible { outline:2px solid var(--ann-accent); outline-offset:3px; }
+.ann-site-nav a[aria-current="page"] { color:var(--ann-text); font-weight:650; }

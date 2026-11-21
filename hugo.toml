@@ -1,3 +1,17 @@
 baseURL = "https://annouimo.com/"
 languageCode = "zh-CN"
 disableKinds = ["taxonomy", "term", "sitemap", "RSS"]
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "design"
+target = "assets/shared"
+[[module.mounts]]
+source = "design"
+target = "data/shared"
+includeFiles = ["sites.json"]
+[[module.mounts]]
+source = "design/icons"
+target = "static/icons"

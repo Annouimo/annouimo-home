@@ -1,0 +1,22 @@
+[
+  {
+    "id": "home",
+    "name": "个人主页",
+    "url": "https://annouimo.com/"
+  },
+  {
+    "id": "blog",
+    "name": "博客",
+    "url": "https://blog.annouimo.com/"
+  },
+  {
+    "id": "gallery",
+    "name": "书与影",
+    "url": "https://gallery.annouimo.com/"
+  },
+  {
+    "id": "learn",
+    "name": "求知札记",
+    "url": "https://learn.annouimo.com/"
+  }
+]

@@ -1,23 +1,10 @@
 :root {
-  color-scheme: light dark;
-  --paper: #f5f4ed;
-  --text: #262824;
-  --muted: #595d55;
-  --ink: #1b365d;
-  --rule: #d8d7cb;
-  --hover: #edede3;
-  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #20211e;
-    --text: #edede2;
-    --muted: #b8b9ad;
-    --ink: #acc7eb;
-    --rule: #41433b;
-    --hover: #2b2d27;
-  }
+  --paper: var(--ann-canvas);
+  --text: var(--ann-text);
+  --muted: var(--ann-muted);
+  --ink: var(--ann-accent);
+  --rule: var(--ann-border);
+  --hover: var(--ann-hover);
 }
 
 * { box-sizing: border-box; }
