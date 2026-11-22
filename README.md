@@ -1,6 +1,6 @@
 # Annouimo 个人主页
 
-[annouimo.com](https://annouimo.com/) 汇集博客、书与影、求知札记和精选 GitHub 项目。
+[annouimo.com](https://annouimo.com/) 汇集博客、书与影和精选 GitHub 项目。
 
 - 站点介绍和精选项目写在 `content/_index.md`。
 - 首页模板在 `layouts/`，样式在 `assets/css/portal.css`。
