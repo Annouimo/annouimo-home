@@ -8,9 +8,6 @@ portalSites:
   - name: 书与影
     url: https://gallery.annouimo.com/
     description: 阅读与观看记录。
-  - name: 求知札记
-    url: https://learn.annouimo.com/
-    description: 用图形和交互讲清楚学到的东西。
 repositories:
   - name: c-exam-kit
     url: https://github.com/Annouimo/c-exam-kit
